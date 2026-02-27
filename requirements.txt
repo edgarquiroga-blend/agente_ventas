@@ -1,0 +1,34 @@
+# ─────────────────────────────────────────────────────────────
+# requirements.txt
+# Dependencias del Agente de Análisis de Ventas
+# ─────────────────────────────────────────────────────────────
+
+# ── Framework de Agentes ──────────────────────────────────────
+# LangChain: framework principal para construir el agente
+langchain==0.3.7
+
+# ── Conectores LLM (elige al menos uno) ──────────────────────
+# Conector oficial LangChain para Claude de Anthropic
+langchain-anthropic==0.3.0
+
+# Conector oficial LangChain para OpenAI (alternativa)
+langchain-openai==0.2.9
+
+# ── Procesamiento de Datos ────────────────────────────────────
+# Pandas: manipulación de DataFrames (resultados SQL → tabular)
+pandas==2.2.3
+
+# ── Base de Datos ─────────────────────────────────────────────
+# sqlite3 está incluido en Python estándar, no requiere instalación
+
+# ── Visualización ─────────────────────────────────────────────
+# Matplotlib: generación de gráficos estáticos (PNG)
+matplotlib==3.9.2
+
+# ── Exportación de Archivos ───────────────────────────────────
+# openpyxl: lectura/escritura de archivos Excel (.xlsx)
+openpyxl==3.1.5
+
+# ── Variables de Entorno ──────────────────────────────────────
+# python-dotenv: cargar API keys desde archivo .env
+python-dotenv==1.0.1
