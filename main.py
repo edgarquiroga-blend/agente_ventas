@@ -60,7 +60,7 @@ DEMO_PREGUNTAS = [
 # FUNCIONES PRINCIPALES
 # ─────────────────────────────────────────────────────────
 
-def interactive_mode(provider: str = "anthropic"):
+def interactive_mode(provider: str = "groq"):
     """
     Modo interactivo: el usuario escribe preguntas y el agente responde.
     
@@ -102,7 +102,7 @@ def interactive_mode(provider: str = "anthropic"):
         print("\n" + "═" * 60 + "\n")
 
 
-def demo_mode(provider: str = "anthropic"):
+def demo_mode(provider: str = "groq"):
     """
     Modo demo: ejecuta un conjunto de preguntas de ejemplo automáticamente.
     Útil para mostrar las capacidades del agente sin interacción manual.
@@ -125,7 +125,7 @@ def demo_mode(provider: str = "anthropic"):
     print("\n🎬 Demo completado. Los archivos generados están en la carpeta 'outputs/'")
 
 
-def single_query_mode(pregunta: str, provider: str = "anthropic"):
+def single_query_mode(pregunta: str, provider: str = "groq"):
     """
     Modo de pregunta única: responde una sola pregunta y termina.
     Útil para scripting o integración con otras aplicaciones.
@@ -171,7 +171,7 @@ Ejemplos de uso:
     parser.add_argument(
         "--provider",
         type=str,
-        default="anthropic",
+        default="groq",
         choices=["anthropic", "openai"],
         help="Proveedor del LLM: 'anthropic' (Claude) o 'openai' (GPT-4)"
     )
