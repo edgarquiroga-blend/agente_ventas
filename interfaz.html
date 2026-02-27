@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agente de Ventas IA</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <div class="logo-icon">📊</div>
+    <div class="logo-text">Agente<span>Ventas</span></div>
+  </div>
+  <div class="status-badge">
+    <div class="status-dot"></div>
+    LLaMA 3.3 · Groq · SQLite
+  </div>
+</header>
+
+<div class="main">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-title">Consultas rápidas</div>
+
+    <button class="suggestion-btn" onclick="sendSuggestion(this)">
+      <span class="suggestion-icon">🏆</span>
+      Top 5 productos más vendidos en Medellín
+    </button>
+
+    <button class="suggestion-btn" onclick="sendSuggestion(this)">
+      <span class="suggestion-icon">👤</span>
+      Vendedor con más ventas en Bogotá
+    </button>
+
+    <button class="suggestion-btn" onclick="sendSuggestion(this)">
+      <span class="suggestion-icon">📈</span>
+      Muéstrame un gráfico de ventas por sede
+    </button>
+
+    <button class="suggestion-btn" onclick="sendSuggestion(this)">
+      <span class="suggestion-icon">💰</span>
+      Total de ingresos por producto
+    </button>
+
+    <button class="suggestion-btn" onclick="sendSuggestion(this)">
+      <span class="suggestion-icon">📥</span>
+      Guarda las ventas por vendedor en CSV
+    </button>
+
+    <button class="suggestion-btn" onclick="sendSuggestion(this)">
+      <span class="suggestion-icon">📊</span>
+      Exportar reporte completo en Excel
+    </button>
+
+    <div class="divider"></div>
+
+    <div class="sidebar-title">Análisis</div>
+
+    <button class="suggestion-btn" onclick="sendSuggestion(this)">
+      <span class="suggestion-icon">🗺️</span>
+      Comparar ventas entre todas las sedes
+    </button>
+
+    <button class="suggestion-btn" onclick="sendSuggestion(this)">
+      <span class="suggestion-icon">📅</span>
+      Ventas del mes de febrero 2024
+    </button>
+
+    <button class="suggestion-btn" onclick="sendSuggestion(this)">
+      <span class="suggestion-icon">🥇</span>
+      Ranking completo de vendedores
+    </button>
+  </aside>
+
+  <!-- CHAT -->
+  <div class="chat-area">
+    <div class="messages" id="messages">
+
+      <!-- Welcome screen -->
+      <div class="welcome" id="welcome">
+        <div class="welcome-icon">🤖</div>
+        <h2>Agente de Análisis de Ventas</h2>
+        <p>Haz preguntas en lenguaje natural sobre los datos de ventas. Puedo generar tablas, gráficos y exportar archivos.</p>
+        <div class="welcome-chips">
+          <span class="chip" onclick="sendSuggestion(this)">📊 Gráficos</span>
+          <span class="chip" onclick="sendSuggestion(this)">📋 Tablas SQL</span>
+          <span class="chip" onclick="sendSuggestion(this)">📥 Exportar CSV</span>
+          <span class="chip" onclick="sendSuggestion(this)">📈 Rankings</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- INPUT -->
+    <div class="input-area">
+      <div class="input-wrapper">
+        <textarea
+          id="userInput"
+          rows="1"
+          placeholder="Escribe tu pregunta sobre ventas..."
+          onkeydown="handleKey(event)"
+          oninput="autoResize(this)"
+        ></textarea>
+        <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+          <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        </button>
+      </div>
+      <div class="input-hint">Enter para enviar · Shift+Enter para nueva línea</div>
+    </div>
+  </div>
+
+</div>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
