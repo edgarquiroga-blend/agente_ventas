@@ -1,0 +1,20 @@
+# Entorno virtual
+venv/
+.venv/
+
+# Base de datos generada
+ventas.db
+
+# Archivos generados por el agente
+outputs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Variables de entorno
+.env
+
+# VS Code
+.vscode/
